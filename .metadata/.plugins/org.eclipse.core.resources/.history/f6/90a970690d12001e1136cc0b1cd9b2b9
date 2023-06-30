@@ -1,0 +1,49 @@
+package org.sam;
+
+
+
+public class GmailLoginPojo extends BaseClass {
+
+//1.Non parameterized constructor
+		public GmailLoginPojo() {
+			
+		}
+			
+		
+				//public GmailLoginPojo {
+				//	PageFactory.initElements(driver,this);
+					
+				}
+				//2.Private WebElement find
+				@FindBy(id="identifierId")
+				private WebElement email;
+				
+				@FindBy(name="Passwd")
+				private WebElement password;
+				
+				@FindBy(xpath="(//div[@class='VfPpkd-RLmnJb'])[1]")
+		        private WebElement login;
+		
+		
+		
+		
+		
+		
+		
+		/* driver.navigate().refresh();
+		//passText("Priya",g.getEmail());
+		//passText("Achu", g.getPassword());
+		*/
+		
+				
+	}
+
+	
+		
+	}
+
+	
+
+	
+
+

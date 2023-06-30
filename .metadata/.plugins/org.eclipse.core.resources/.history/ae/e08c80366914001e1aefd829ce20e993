@@ -1,0 +1,12 @@
+Feature: To validate the account creation of fb application
+
+Scenario: To create new account
+Given To launch the browser and maximaize the window
+When To launch the url of fb application
+And click create new account button
+And To pass firstname in firstname text box
+And To pass secondname in secondname text box
+And To pass mobile no or email in email text box
+And To create new password using password text box
+Then To close the chrome browser
+

@@ -1,0 +1,26 @@
+package org.pojo;
+
+
+
+import baseClass.BaseClass;
+
+public class GmailLoginPojo extends BaseClass {
+
+	public static void main(String[] args) {
+		launchBrowser();
+		launchUrl("https://accounts.google.com/");
+		windowMaximize();
+		
+		
+		
+		
+		/* driver.navigate().refresh();
+		//passText("Priya",g.getEmail());
+		//passText("Achu", g.getPassword());
+		*/
+
+	}
+
+	}
+
+}

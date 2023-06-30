@@ -1,0 +1,8 @@
+package org.sam;
+
+public class PinkGymPojo  extends BaseClass {
+	
+	
+	
+
+}

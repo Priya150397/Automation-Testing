@@ -1,0 +1,49 @@
+package org.sam;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SignInPojo extends BaseClass {
+
+	public SignInPojo() {
+		PageFactory.initElements(driver, this);
+		
+	}
+	public WebElement getSignUpAcc() {
+		return signUpAcc;
+	}
+
+	public WebElement getFirstName() {
+		return firstName;
+	}
+
+	public WebElement getLastName() {
+		return lastName;
+	}
+
+	public WebElement getPhonNo() {
+		return phonNo;
+	}
+
+	public WebElement getPassword() {
+		return password;
+	}
+	@FindBy(xpath = "//a[text()='Sign up for Facebook']")
+     private WebElement signUpAcc;
+	
+	@FindBy(name = "firstname")
+	private WebElement firstName;
+	
+	@FindBy(xpath = "//input[@aria-label='Surname']")
+    private WebElement lastName;
+	
+	@FindBy(name = "reg_email__")
+	private WebElement phonNo;
+	
+	@FindBy(id = "password_step_input")
+	private WebElement password;
+	
+	
+} 
+	

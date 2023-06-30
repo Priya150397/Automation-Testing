@@ -1,0 +1,54 @@
+package org.stepdefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.pojo.PinkGymPojo;
+import org.sample.BaseClass;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class PinkLogin extends BaseClass {
+	
+	
+	@Given("To launch the browser and maximize the window")
+	public void to_launch_the_browser_and_maximize_the_window() {
+	    launchBrowser();
+	    windowMaximize();
+	}
+	
+	
+	@When("To launch the url of pinkgym application")
+	public void to_launch_the_url_of_pinkgym_application() {
+	    launchUrl("https://ashoknagar.pinkfitnessone.in/");
+	}
+
+	@When("To pass the name in name textbox")
+	public void to_pass_the_name_in_name_textbox() {
+		WebElement name = driver.findElement(By.name("name"));
+		name.sendKeys("Priya");
+	    
+	}
+
+	@When("To pass the mobile number in mobile number text box")
+	public void to_pass_the_mobile_number_in_mobile_number_text_box() {
+	    WebElement phone = driver.findElement(By.xpath("(//input[@placeholder='Mobile'])[1]"));
+	    phone.sendKeys("7397344026");
+	    
+	}
+
+	@When("To click get more offer button")
+	public void to_click_get_more_offer_button() {
+		WebElement offer = driver.findElement(By.xpath("(//button[@type='submit'])[1]"));
+		offer.click();
+		
+	}
+
+	@Then("To close the entire browser")
+	public void to_close_the_entire_browser() {
+	    closeEntireBrowser();
+	}
+
+
+}

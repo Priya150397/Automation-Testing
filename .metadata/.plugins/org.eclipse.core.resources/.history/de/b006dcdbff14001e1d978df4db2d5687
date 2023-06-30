@@ -1,0 +1,22 @@
+package org.sam;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SignInPojo extends BaseClass {
+	
+	private void SigInPojo() {
+		PageFactory.initElements(driver, this);
+
+	}
+	
+	
+	
+	
+   
+
+	
+}
+
+

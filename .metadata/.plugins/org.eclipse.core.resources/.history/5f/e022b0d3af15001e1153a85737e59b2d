@@ -1,0 +1,37 @@
+package org.sam;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PinkGymPojo  extends BaseClass {
+	
+	public WebElement getName() {
+		return name;
+	}
+
+	public WebElement getPhoneNo() {
+		return phoneNo;
+	}
+
+	public WebElement getOffer() {
+		return offer;
+	}
+
+	public PinkGymPojo() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(name = "name")
+	private WebElement name;
+	
+	@FindBy(xpath = "((//input[@type='text'])[1]")
+	private WebElement phoneNo;
+	
+	@FindBy(name = "singlebutton")
+	private WebElement offer;
+	
+	
+	
+
+}

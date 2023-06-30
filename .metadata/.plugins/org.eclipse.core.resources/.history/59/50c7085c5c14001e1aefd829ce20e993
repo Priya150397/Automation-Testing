@@ -1,0 +1,60 @@
+package org.stepdefinition;
+
+import org.sam.GmailLoginPojo;
+import org.sam.Sample;
+import org.sample.BaseClass;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class GmailLogin extends BaseClass {
+	GmailLoginPojo g;
+	@Given("User has to launch the browser and maximize the window")
+	public void user_has_to_launch_the_browser_and_maximize_the_window() {
+		launchBrowser();
+		windowMaximize();
+	    
+	}
+
+	@When("User has hit the g-mail url")
+	public void user_has_hit_the_g_mail_url() {
+	    launchUrl("https://accounts.google.com/");
+	}
+
+	@When("User has to pass the data {string} in email field")
+	public void user_has_to_pass_the_data_in_email_field() {
+		g = new GmailLoginPojo();
+	    passText("priyavp150397@gmail.com",g.getEmail());
+	}
+
+	@When("User has to click next button")
+	public void user_has_to_click_next_button() {
+		g = new GmailLoginPojo();
+		passText("click", g.getNxtBtn());
+		   
+	}
+
+	@When("User has to pass the data {string}in password field")
+	public void user_has_to_pass_the_data_in_password_field() {
+		g = new GmailLoginPojo();
+		passText(" ", g.getPassword());
+	    
+	}
+
+	/*@When("User has to click the next button")
+	public void user_has_to_click_the_next_button() {
+		g = new GmailLoginPojo();
+		passText("click", g.getNxtBtn());
+	}
+
+	@Then("User has to close the browser")
+	public void user_has_to_close_the_browser() {
+		
+		closeEntireBrowser();
+		} */
+
+	}	
+	
+
+

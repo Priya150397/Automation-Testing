@@ -1,0 +1,10 @@
+Feature: To validate the pinkgym web application
+
+Scenario: To validate the login application
+Given To launch the browser and maximaize the window
+When To launch the url of pinkgym application
+And To pass the name in name textbox
+And To pass the mobile number in mobile number text box
+And To click get more offer button
+Then To close the entire browser
+

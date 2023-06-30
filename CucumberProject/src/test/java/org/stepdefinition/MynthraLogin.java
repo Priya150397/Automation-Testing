@@ -1,0 +1,45 @@
+package org.stepdefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.sample.BaseClass;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class MynthraLogin extends BaseClass {
+	
+	
+	@Given("To launch the browser and maximize the window")
+	public void toLaunchTheBrowserAndMaximizeTheWindow() {
+		launchBrowser();
+		windowMaximize();
+	}
+
+	@When("To launch the url of mynthra application")
+	public void toLaunchTheUrlOfMynthraApplication() {
+		launchUrl("https://www.myntra.com/");
+	}
+
+	@When("To pass the product name in search text box")
+	public void toPassTheProductNameInSearchTextBox() {
+		WebElement searchBtn = driver.findElement(By.xpath("//input[@placeholder='Search for products, brands and more']"));
+		   searchBtn.sendKeys("t-shirts");
+	}
+
+	@When("To click search option")
+	public void toClickSearchOption() {
+		WebElement seachIcon = driver.findElement(By.xpath("//a[@class='desktop-submit']"));
+		seachIcon.click();
+	}
+
+	@Then("To close the chrome browser")
+	public void toCloseTheChromeBrowser() {
+	    closeEntireBrowser();
+	}
+ 
+	}
+	
+	

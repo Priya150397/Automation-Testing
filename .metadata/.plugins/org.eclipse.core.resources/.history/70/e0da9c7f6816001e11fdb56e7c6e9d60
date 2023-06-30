@@ -1,0 +1,9 @@
+Feature: To access Mynthra web application
+
+Scenario: To login the mynthra account
+When To launch the browser and maximize the window
+Given To launch the url of mynthra application
+And To enter the mobile number
+And To click continue button
+Then To close the chrome browser
+

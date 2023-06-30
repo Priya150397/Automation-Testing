@@ -1,0 +1,62 @@
+package org.sam;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SignInPojo extends BaseClass {
+
+	public SignInPojo() {
+		PageFactory.initElements(driver, this);
+		
+	}
+	@FindBy(xpath = "//*[@id=\"u_0_0_qG\"]")
+	private WebElement createAccount;
+	
+	
+	@FindBy(xpath = "//input[@placeholder='First name']")
+	private WebElement firstName;
+	
+	@FindBy(name = "lastname")
+	private WebElement lastName;
+	
+	@FindBy(xpath = "//input[@aria-label='Mobile number or email address']")
+	private WebElement phoneNo;
+	
+	@FindBy(xpath = "(//input[@type='password'])[2]")
+	private WebElement password;
+
+	public WebElement getCreateAcc() {
+		return createAcc;
+	}
+
+	public WebElement getFirstName() {
+		return firstName;
+	}
+
+	public WebElement getLastName() {
+		return lastName;
+	}
+
+	public WebElement getPhoneNo() {
+		return phoneNo;
+	}
+
+	
+
+	public WebElement getPassword() {
+	
+		return password;
+	}
+
+	 
+
+
+
+	
+	}
+
+
+
+
+

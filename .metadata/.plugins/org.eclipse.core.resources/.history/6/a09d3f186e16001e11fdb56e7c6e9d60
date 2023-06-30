@@ -1,0 +1,38 @@
+package org.stepdefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.sample.BaseClass;
+
+import cucumber.api.java.en.When;
+
+
+
+public class MynthraLogin extends BaseClass {
+	
+	@When("To launch the url of mynthra application")
+	public void to_launch_the_url_of_mynthra_application() {
+	    launchUrl("https://www.myntra.com/");
+	}
+
+	@When("To click the search text box")
+	public void to_click_the_search_text_box() {
+	   WebElement searchBtn = driver.findElement(By.xpath("//input[@placeholder='Search for products, brands and more']"));
+	   searchBtn.click();
+	}
+
+	@When("To pass the value in search text box")
+	public void to_pass_the_value_in_search_text_box() {
+		 driver.findElement(By)
+	}
+
+	@When("To press search option")
+	public void to_press_search_option() {
+		 driver.findElement(By)
+	}
+	
+	
+	    
+	}
+	
+	

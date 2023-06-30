@@ -1,0 +1,30 @@
+package org.stepdefinition;
+
+import org.sample.BaseClass;
+
+import cucumber.api.java.en.Given;
+
+public class MynthraLogin extends BaseClass {
+	
+	
+	
+	@Given("To launch the url of mynthra application")
+	public void to_launch_the_url_of_mynthra_application() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@Given("To enter the mobile number")
+	public void to_enter_the_mobile_number() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@Given("To click continue button")
+	public void to_click_continue_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+	
+
+}

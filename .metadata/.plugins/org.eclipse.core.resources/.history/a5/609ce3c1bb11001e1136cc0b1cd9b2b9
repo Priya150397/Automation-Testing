@@ -1,0 +1,28 @@
+package org.pojo;
+
+import org.openqa.selenium.WebElement;
+
+import baseClass.BaseClass;
+
+public class GmailLoginPojo extends BaseClass {
+
+	public static void main(String[] args) {
+		launchBrowser();
+		launchUrl("https://accounts.google.com/");
+		windowMaximize();
+		GmailLoginPojo g = new GmailLoginPojo();
+		passText("Priyavp150397@gmail.com",g.getEmail());
+		passText("Priya@150397",g.getPassword());
+		
+		driver.navigate().refresh();
+		passText("Priya",g.getEmail());
+		passText("Achu", g.getPassword());
+
+	}
+
+	private WebElement getEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
